@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+    <style>
+        .container{
+            padding-top: 30px;
+            padding: 7%;
+        text-align: center;
+        font-size: 400%;
+        background-color: black;
+        color: red;
+        position: fixed;
+        width: 100%;
+        height: 100%;
+        }
+    </style>
+</head>
+<body>
+    <div class = "container">
+        <h2>Welcome to the Dashboard!</h2>
+        <p id="creds"></p>
+    </div>
+    <script>
+        window.addEventListener(DOMContentLoaded, function(){
+            var username = localStorage.getItem('username');
+
+            document.getElementById('creds').innerHTML = "Welcome to the Dashboard : " + username + "!";
+        });
+    </script>
+</body>
+</html>
